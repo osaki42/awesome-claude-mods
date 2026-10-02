@@ -1,0 +1,41 @@
+name: Submit a mod
+description: Suggest a Claude Mod for the list
+title: "Add: "
+labels: [submission]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: Repo link
+      placeholder: https://github.com/you/your-mod
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: What does it do? (one sentence)
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - See More
+        - Track Usage and Cost
+        - GitHub and Teams
+        - Stay in Control
+        - Fun
+        - Build Your Own
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: It's a Claude Mod (uses function hooks)
+          required: true
+        - label: It works on a current Claude Code
+          required: true
