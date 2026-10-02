@@ -2,17 +2,34 @@ name: Check links
 
 on:
   push:
-  pull_request:
   schedule:
     - cron: "0 3 * * 1"
   workflow_dispatch:
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   links:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v2
+      - id: lychee
+        uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude '^\.\./' README.md CONTRIBUTING.md
-          fail: true
+          args: --no-progress README.md CONTRIBUTING.md
+          fail: false
+      - name: Report broken links in an issue
+        if: steps.lychee.outputs.exit_code != 0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          num=$(gh issue list --label broken-links --state open --json number --jq '.[0].number')
+          if [ -n "$num" ]; then
+            gh issue edit "$num" --body-file lychee/out.md
+          else
+            gh label create broken-links --color d73a4a --description "Dead links found" 2>/dev/null || true
+            gh issue create --title "Broken links" --label broken-links --body-file lychee/out.md
+          fi

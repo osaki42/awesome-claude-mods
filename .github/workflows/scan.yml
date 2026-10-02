@@ -1,0 +1,35 @@
+name: Scan for new mods
+
+on:
+  schedule:
+    - cron: "0 3 * * 1,4"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan and update the candidates issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "Mods found on GitHub that aren't on the list yet. Review, then add the good ones to README.md."
+            echo
+            echo "_Last scan: $(date -u '+%Y-%m-%d %H:%M UTC')_"
+            echo
+            ./scripts/scan.sh
+          } > body.md
+          num=$(gh issue list --label scan --state open --json number --jq '.[0].number')
+          if [ -n "$num" ]; then
+            gh issue edit "$num" --body-file body.md
+          else
+            gh label create scan --color 1d76db --description "Weekly mod scan" 2>/dev/null || true
+            gh issue create --title "New mod candidates" --label scan --body-file body.md
+          fi
