@@ -80,7 +80,7 @@ Built by Anthropic, shipped in the [Claude Code repo](https://github.com/anthrop
 
 ## Contributing
 
-Built a mod or found a good one? [Submit it](../../issues/new?template=submit-mod.yml) or read [CONTRIBUTING.md](CONTRIBUTING.md).
+Built a mod or found a good one? [Submit it](https://github.com/osaki42/awesome-claude-mods/issues/new?template=submit-mod.yml) or read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

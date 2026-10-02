@@ -1,6 +1,6 @@
 # Contributing
 
-Easiest way: [open a submission](../../issues/new?template=submit-mod.yml). Or send a pull request.
+Easiest way: [open a submission](https://github.com/osaki42/awesome-claude-mods/issues/new?template=submit-mod.yml). Or send a pull request.
 
 ## What gets in
 
