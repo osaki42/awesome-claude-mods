@@ -39,11 +39,13 @@ Built by Anthropic, shipped in the [Claude Code repo](https://github.com/anthrop
 - [claude-plugin-mermaid](https://github.com/WhiteKr/claude-plugin-mermaid) - Turns mermaid code blocks into box-drawing diagrams in the terminal.
 - [flowpane](https://github.com/mpolatcan/flowpane) - Live graph of a running workflow, in a side pane.
 - [cc-mod-waitwhat](https://github.com/GGGODLIN/cc-mod-waitwhat) - Re-explains Claude's last answer in plain words, without touching the chat.
+- [next-steps](https://github.com/pawandeepdhall/claude-mods) - Up to three suggested next prompts after each reply, as buttons you click to send.
 
 ## Track Usage and Cost
 
 - [cctop](https://github.com/tomstagl/cctop) - A live dashboard for context, tokens, cost, limits and agents.
 - [claude-mods (trackers)](https://github.com/Arunjay4213/claude-mods) - Context window, plan quota burn rate and cost per turn.
+- [usage-band](https://github.com/pawandeepdhall/claude-mods) - Your 5-hour and weekly limits with time until reset, always above the prompt, plus one-click new chat and push.
 
 ## GitHub and Teams
 
