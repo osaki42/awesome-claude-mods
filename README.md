@@ -45,6 +45,7 @@ Built by Anthropic, shipped in the [Claude Code repo](https://github.com/anthrop
 
 - [cctop](https://github.com/tomstagl/cctop) - A live dashboard for context, tokens, cost, limits and agents.
 - [claude-mods (trackers)](https://github.com/Arunjay4213/claude-mods) - Context window, plan quota burn rate and cost per turn.
+- [cockpit-for-claude](https://github.com/drkokorev/cockpit-for-claude) - Context, limits, cost, subagents, tool errors, diffs and tests in one live panel, with a guard for risky commands.
 - [usage-band](https://github.com/pawandeepdhall/claude-mods) - Your 5-hour and weekly limits with time until reset, always above the prompt, plus one-click new chat and push.
 
 ## GitHub and Teams
@@ -64,7 +65,7 @@ Built by Anthropic, shipped in the [Claude Code repo](https://github.com/anthrop
 - [cc-arcade](https://github.com/sezaakgun/cc-arcade) - Snake, Tetris, 2048 and more above the prompt, plus a pet that grows as you ship.
 - [claude-games](https://github.com/mohi-devhub/claude-games) - Arcade games that react to Claude's real edits, tests and commits.
 - [cc-dino](https://github.com/giovaborgogno/cc-dino) - The offline T-rex game, with a leaderboard.
-- [clawd-band](https://github.com/tomada1114/clawd-band) - A pixel cat that reacts to what Claude is doing.
+- [pixel-buddy](https://github.com/SimakovIgor/pixel-buddy) - A pixel pet in the footer that grows on your answers, passing tests and commits.
 - [claude-mods-pokedex](https://github.com/deonmenezes/claude-mods-pokedex) - Catch creatures based on what you type. Your partner levels up as Claude works.
 - [roll-credits](https://github.com/smukh/roll-credits) - Movie-style credits at the end of your session.
 - [claude-roulette](https://github.com/tldev/claude-roulette) - Chat with a random human while Claude is thinking.
